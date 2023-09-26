@@ -62,11 +62,18 @@ html {
 }
 
 body {
+  --dot-bg: #f2f1ef;
+  --dot-color: black;
+  --dot-size: 1px;
+  --dot-space: 60px;
+	background:
+		linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+		linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+		var(--dot-color);
   margin: var(--header-height) 0 0 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   color: var(--second-color);
-  background-color: #f2f1ef;
 }
 
 h1,
@@ -433,7 +440,7 @@ img {
 
 /* ===== FOOTER =====*/
 .footer {
-  background-color: var(--second-color);
+  background-color: #161513;
   color: #fff;
   text-align: center;
   font-weight: var(--font-semi);
@@ -467,16 +474,8 @@ img {
   .home__img {
     width: 200px;
   }
+
   
-  .active::after {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 0.18rem;
-  left: 0;
-  top: 2rem;
-  background-color: #fff;
-}
 }
 
 @media screen and (min-width: 576px) {
