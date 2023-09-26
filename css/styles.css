@@ -143,6 +143,12 @@ img {
   font-weight: var(--font-semi);
 }
 
+.work-description{
+  margin: 5px;
+  font-size: 10px;
+  color: #000106;
+}
+
 @media screen and (max-width: 768px) {
   .nav__menu {
     position: fixed;
@@ -382,6 +388,7 @@ img {
 .work__container {
   row-gap: 2rem;
 }
+
 
 .work__img {
   box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
