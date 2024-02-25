@@ -313,9 +313,62 @@ img {
 
 /* ===== SKILLS =====*/
 .skills__container {
-  row-gap: 2rem;
+  row-gap: 4rem;
   text-align: center;
 }
+
+.skills-banner{
+  overflow: hidden;
+  background: #f2f1ef;
+  padding-top: 90px;
+  padding-bottom: 96px;
+  
+}
+
+.skills-container{
+  transform: rotate(-3deg);
+  overflow: hidden;
+  background: #161513;
+  width: 121%;
+  z-index: 200;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.wheel{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  animation: scroll 15s linear infinite; /* Adjust timing as needed */
+}
+
+.skills-banner {
+  width: 100%;
+  overflow: hidden;
+}
+
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% - 10px)); /* Adjust the distance between icons */
+  }
+}
+
+.skills-tech {
+  width: 100%;
+  padding: 10px;
+}
+
+
+
 
 .skills__subtitle {
   margin-bottom: var(--mb-2);
@@ -327,20 +380,32 @@ img {
 
 .skills__data {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  /* justify-content: space-between; */
+  /* align-items: center; */
   position: relative;
   font-weight: var(--font-semi);
   padding: 0.5rem 1rem;
   margin-bottom: var(--mb-4);
   border-radius: 0.5rem;
-  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
+  /* box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15); */
 }
 
 .skills__icon {
-  font-size: 2rem;
+  font-size: 4rem;
   margin-right: var(--mb-2);
   color: #e94d35;
+}
+
+.next{
+  width: 4rem;
+  height: 4rem;
+  margin-right: 1rem;
+}
+
+.type{
+  width: 4rem;
+  height: 4rem;
+  margin-right: 1rem;
 }
 
 .skills__names {
@@ -348,60 +413,32 @@ img {
   align-items: center;
 }
 
-.skills__bar {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  background-color: #161513;
-  height: 0.25rem;
-  border-radius: 0.5rem;
-  z-index: var(--z-back);
-}
-
-.skills__html {
-  width: 83%;
-}
-
-.skills__css {
-  width: 76%;
-}
-
-.skills__js {
-  width: 60%;
-}
-
-.skills__py {
-  width: 20%;
-}
-
-.skills__py {
-  width: 20%;
-}
-
-.skills__vue {
-  width: 40%;
-}
-
-.skills__react {
-  width: 49%;
-}
-
-.skills__ang {
-  width: 20%;
-}
-
-.skills__boot {
-  width: 50%;
-}
 
 .skills__img {
   border-radius: 0.5rem;
+}
+
+.skills-tech{
+  display: flex;
+  gap: 8px;
+  margin: 1rem 0;
+  margin-left: 5px;
+}
+
+.skills-btn{
+  border: 1px solid #e94d35;
+  border-radius: 4px;
+  padding: 5px 10px;
 }
 
 
 /* ===== WORK =====*/
 .work__container {
   row-gap: 2rem;
+}
+
+.work__container a{
+  padding: 20px;
 }
 
 
@@ -412,6 +449,8 @@ img {
 }
 
 .work__img img {
+  border-radius: 0.5rem;
+  /* object-fit: fill; */
   transition: 1s;
 }
 
@@ -476,6 +515,7 @@ img {
   .home__img {
     width: 200px;
   }
+
 
   
 }
